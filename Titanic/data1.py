@@ -1,8 +1,8 @@
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 
-train_data = pd.read_csv("train.csv")
-test_data = pd.read_csv("test.csv")
+train_data = pd.read_csv("C:\\Users\\Master\\Desktop\\ML\\Titanic\\train.csv")
+test_data = pd.read_csv("C:\\Users\\Master\\Desktop\\ML\\Titanic\\test.csv")
 
 y = train_data["Survived"]
 
@@ -15,5 +15,5 @@ model.fit(X, y)
 predictions = model.predict(X_test)
 
 output = pd.DataFrame({'PassengerId': test_data.PassengerId, 'Survived': predictions})
-output.to_csv('submission1.csv', index=False)
+output.to_csv('Titanic\\submission1.csv', index=False)
 print("Your submission was successfully saved!")
